@@ -15,54 +15,20 @@
 <script>
 export default{
   name: 'HomeIcons',
+  props: {
+    list:Array
+  },
   data () {
   	return {
-	  		swiperOption: {
-	        autoplay: false
-	      },
-  		  iconList: [{
-			  	id: 1,
-			  	imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-			  	desc:'热门景点'
-			  }, {
-			  	id: 2,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }, {
-			  	id: 3,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }, {
-			  	id: 4,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }, {
-			  	id: 5,
-			  	imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-			  	desc:'热门景点'
-			  }, {
-			  	id: 6,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }, {
-			  	id: 7,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }, {
-			  	id: 8,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }, {
-			  	id: 9,
-			  	imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-			  	desc:'北京必游'
-			  }]
+	  	swiperOption: {
+	      autoplay: false
+	    },
   	}
   },
   computed: {
     pages() {
     	const pages=[];
-    	this.iconList.forEach((item,index)=>{
+    	this.list.forEach((item,index)=>{
          const page=Math.floor(index/8);
          if(!pages[page]){
          	  pages[page]=[];

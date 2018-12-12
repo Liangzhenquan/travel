@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <router-link to='/gallary'>
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt="">
+      <img class="banner-img" :src="list" alt="">
     </router-link>
     <div class="banner-info">
       <div class="banner-number">
@@ -9,14 +9,18 @@
         39
       </div>
       <div class="banner-title">
-        故宫(AAAAA景区)
+        {{sightName}}
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  props: {
+    list: String,
+    sightName: String
+  }
 }
 </script>
 <style scoped>

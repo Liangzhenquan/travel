@@ -1,14 +1,21 @@
 <template>
   <div class="list">
     <ul class="gallary-img">
-      <li class="item-img" @click='showGallary'><img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_350x240_8e61302a.jpg" alt=""></li>
-      <li class="item-img"><img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_350x240_8e61302a.jpg" alt=""></li>
+      <li 
+        class="item-img" 
+        @click='showGallary'
+        v-for='(item,index) of gallaryImgs'
+        :key='index'
+      ><img :src="item" alt=""></li>
     </ul>
   </div>
 </template>
 <script>
 export default {
   name: 'GallaryList',
+  props: {
+    gallaryImgs: Array
+  },
   methods: {
     showGallary (e) {
       this.$emit('show');

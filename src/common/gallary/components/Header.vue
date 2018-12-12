@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <div class="header-left">
+    <router-link tag='div' class="header-left" to='/detail/0001'>
       <div class="iconfont back-icon">&#xe624;</div>
-    </div>
+    </router-link>
     <div class="header-right">
       景区图片
     </div>

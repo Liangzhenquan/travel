@@ -2,7 +2,7 @@
   <div class="space" @click='closeGallary'>
     <div class="wrapper">
      <swiper :options="swiperOptions">
-      <swiper-slide v-for='(item,index) in imgs' :key='index'>
+      <swiper-slide v-for='(item,index) in gallaryImgs' :key='index'>
         <img class="gallary-img" :src="item" />
       </swiper-slide>
     </swiper>
@@ -16,9 +16,10 @@ export default {
     imgs: {
       type: Array,
       default () {
-        return ["http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_350x240_8e61302a.jpg","http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_350x240_8e61302a.jpg"]
+        return []
       }
-    }
+    },
+    gallaryImgs: Array
   },
   data () {
     return {

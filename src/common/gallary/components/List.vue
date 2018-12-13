@@ -3,7 +3,7 @@
     <ul class="gallary-img">
       <li 
         class="item-img" 
-        @click='showGallary'
+        @click='showGallary(index)'
         v-for='(item,index) of gallaryImgs'
         :key='index'
       ><img :src="item" alt=""></li>
@@ -17,8 +17,8 @@ export default {
     gallaryImgs: Array
   },
   methods: {
-    showGallary (e) {
-      this.$emit('show');
+    showGallary (index) {
+      this.$emit('show',index);
     }
   }
 }

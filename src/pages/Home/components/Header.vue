@@ -8,7 +8,7 @@
         输入城市/景点/主题</div>
       <router-link to='/city'>
         <div class="header-right">
-          {{this.$store.state.city}}
+           {{this.$store.state.city}}
           <span class="iconfont arrow-icon">&#xe64a;</span>
         </div>
       </router-link>
@@ -51,10 +51,13 @@ export default{
   color:#ccc;
 }
 .header-right{
-  width: 1.24rem;
+  width: 1.2rem;
   float: right;
   color:#fff;
   text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .arrow-icon{
   font-size: .24rem;

@@ -53,12 +53,13 @@ export default{
   },
   methods: {
     handleCityClick(city){
+      // this.$emit('change',city);
       this.$store.dispatch('changeCity',city);
       this.$router.push('/');
     }
   },
   mounted () {
-    this.scroll=new BScroll(this.$refs.wrapper);
+    this.scroll=new BScroll(this.$refs.wrapper,{click:true});
   },
   watch: {
     letter () {

@@ -82,6 +82,7 @@ export default{
   width: 100%;
   box-sizing: border-box;
   text-align: center;
+  height: .62rem;
   line-height: .62rem;
   border-radius: .1rem;
   padding: 0 .2rem;

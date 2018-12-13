@@ -6,6 +6,7 @@
       v-show='gallary' 
       @close='closeGallary'
       :gallaryImgs='gallaryImgs'
+      :page='page'
       ></gallary-space>
   </div>
 </template>
@@ -24,11 +25,13 @@ export default {
   data () {
     return {
       gallary:false,
-      gallaryImgs: []
+      gallaryImgs: [],
+      page: null
     }
   },
   methods: {
-    showGallary () {
+    showGallary (index) {
+      this.page = index;
       this.gallary = true;
     },
     closeGallary () {

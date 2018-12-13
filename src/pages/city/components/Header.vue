@@ -11,7 +11,7 @@ export default{
 	name: 'CityHeader'
 }
 </script>
-<style>
+<style scoped>
 .header{
 	position: relative;
 	text-align: center;

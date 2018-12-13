@@ -5,6 +5,7 @@
       <swiper-slide v-for='(item,index) in gallaryImgs' :key='index'>
         <img class="gallary-img" :src="item" />
       </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
     </div>
   </div>
@@ -19,7 +20,8 @@ export default {
         return []
       }
     },
-    gallaryImgs: Array
+    gallaryImgs: Array,
+    page: Number
   },
   data () {
     return {
@@ -27,8 +29,14 @@ export default {
          pagination: '.swiper-pagination',
          paginationType: 'fraction',  
          observeParents: true,
-         observer: true
+         observer: true,
+         initialSlide: 1
       }
+    }
+  },
+  watch: {
+    page () {
+      return this.swiperOptions.initialSlide = this. page;
     }
   },
   methods: {
